@@ -2,7 +2,7 @@
 # DoS over TOR
 
 [![Build Status](https://travis-ci.org/zacscott/dos-over-tor.svg?branch=master)](https://travis-ci.org/zacscott/dos-over-tor)
-![Python Version](https://img.shields.io/badge/python-3.5%2C+3.6-blue.svg)
+![Python Version](https://img.shields.io/badge/python-3.5%2C%203.6-blue.svg)
 
 Proof of concept denial of service over TOR stress test tool. Is multi-threaded and supports multiple attack vectors.
 
