@@ -1,5 +1,11 @@
 #!/usr/bin/env python
 
+# Leave here so we can do python version tests first.
+import platform
+if platform.python_version_tuple()[0] < 3 and \
+        platform.python_version_tuple()[1] < 5:
+    raise EnvironmentError("Python versions before 3.5 are not supported.")
+
 import app.console
 import app.net
 import app.tor
