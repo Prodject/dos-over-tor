@@ -8,6 +8,7 @@ from app.weapons.singleshot import SingleShotFactory
 from app.weapons.fullauto import FullAutoFactory
 from app.weapons.slowloris import SlowLorisFactory
 import fire
+import regex
 import signal
 import sys
 
@@ -57,6 +58,9 @@ class CLI:
                 cache_buster=self._cache_buster
             )
 
+            if regex.match(r'.*\.onion$', target, regex.I):
+                raise NotImplementedError("This application does not support .onion addresses.")
+
             self._platoon.attack(
                 weapon_factory=weapon_factory,
                 target_url=target
@@ -84,6 +88,9 @@ class CLI:
                 http_method=self._http_method,
                 cache_buster=self._cache_buster
             )
+
+            if regex.match(r'.*\.onion$', target, regex.I):
+                raise NotImplementedError("This application does not support .onion addresses.")
 
             self._platoon.attack(
                 weapon_factory=weapon_factory,
@@ -114,6 +121,9 @@ class CLI:
                 cache_buster=self._cache_buster,
                 num_sockets=num_sockets
             )
+
+            if regex.match(r'.*\.onion$', target, regex.I):
+                raise NotImplementedError("This application does not support .onion addresses.")
 
             self._platoon.attack(
                 weapon_factory=weapon_factory,
