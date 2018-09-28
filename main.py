@@ -2,8 +2,8 @@
 
 # Leave here so we can do python version tests first.
 import platform
-if platform.python_version_tuple()[0] < 3 and \
-        platform.python_version_tuple()[1] < 5:
+ver_major, ver_minor, _ = platform.python_version_tuple()
+if int(ver_major) < 3 or int(ver_minor) < 5:
     raise EnvironmentError("Python versions before 3.5 are not supported.")
 
 import app.console
