@@ -1,7 +1,7 @@
 
 # DoS over TOR
 
-[![Build Status](https://travis-ci.org/zacscott/dos-over-tor.svg?branch=master)](https://travis-ci.org/zacscott/dos-over-tor)
+![Python Version](https://img.shields.io/badge/python-3.5%2C%203.6-blue.svg)
 
 Proof of concept denial of service over TOR stress test tool. Is multi-threaded and supports multiple attack vectors.
 
@@ -9,7 +9,7 @@ Proof of concept denial of service over TOR stress test tool. Is multi-threaded 
 
 ## Usage
 
-    $ ./main.py <mode> <target URL> [--options]
+    $ python3 main.py <mode> <target URL> [--options]
 
 There are three modes:
 
@@ -32,11 +32,11 @@ Options:
 
 Running a slow loris attack:
 
-    $ ./main.py slowloris http://target_url --num-soldiers=25 --cache-buster --num-sockets=200
+    $ python3 main.py slowloris http://target_url --num-soldiers=25 --cache-buster --num-sockets=200
 
 Running a full auto attack:
 
-    $ ./main.py fullauto http://target_url --num-soldiers=50 --http-method=POST --cache-buster
+    $ python3 main.py fullauto http://target_url --num-soldiers=50 --http-method=POST --cache-buster
 
 ## TODO
 
